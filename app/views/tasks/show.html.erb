@@ -1,9 +1,9 @@
 <div class="container">
   <div class="d-flex justify-content-between">
     <h1><%= @task.title %></h1>
-    <button href="<%=edit_task_path(@task)%>" method="get">
+    <a href="<%=edit_task_path(@task)%>" method="get" class="btn-white-bordered">
       <i class="fas fa-pencil-alt"></i>Edit this task
-    </button>
+    </a>
 
   </div>
   <p><%= @task.details %></p>

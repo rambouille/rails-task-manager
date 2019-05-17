@@ -15,3 +15,15 @@
  */
 
 
+.btn-white-bordered {
+  border-radius: 6px;
+  border: 1px grey solid;
+  padding: 16px 6px;
+}
+
+.btn-white-bordered:hover {
+  border-radius: 6px;
+}
+.btn-white-bordered a {
+  text-decoration: none;
+}
