@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h1><%= @task.title %></h1>
+    <button href="<%=edit_task_path(@task)%>" method="get">
+      <i class="fas fa-pencil-alt"></i>Edit this task
+    </button>
+
+  </div>
+  <p><%= @task.details %></p>
+
+  <% if @task.completed %>
+    <i class="far fa-check-square"></i>
+    <span>This task is completed</span>
+  <% else %>
+    <i class="far fa-square"></i>
+    <span>This task is not completed yet </span>
+  <% end %>
+  <br>
+  <br>
+  <hr>
+  <i class="fas fa-undo-alt"></i>
+  <%= link_to "Back to list", tasks_path  %>
+  <br>
+  <br>
+  <hr>
+  <%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "Are you sure to delete #{@task.title} ?" } %>
+</div>

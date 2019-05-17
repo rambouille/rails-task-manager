@@ -1,0 +1,21 @@
+
+<%= form_for task do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_area :details, size: "60x12", class: 'form-control' %>
+  </div>
+
+  <% unless task.new_record? %>
+    <div class="form-group form-inline">
+      <%= f.check_box :completed, class: 'form-control' %>
+      <%= f.label :completed %>
+    </div>
+  <% end %>
+
+  <%= f.submit "Create task",  class: 'btn btn-primary' %>
+<% end %>
